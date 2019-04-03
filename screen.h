@@ -1,6 +1,6 @@
 // constant definitions
 #define UNICODE
-enum COLORS(BLACK=30, RED, GREEN, YELLOW, BLUE, MAGENTA, CYAN, WHITE);
+enum COLORS{BLACK=30, RED, GREEN, YELLOW, BLUE, MAGENTA, CYAN, WHITE};
 #define bg(c) (c+10)	//macro definition
 // function declarations
 void clearScreen(void);
