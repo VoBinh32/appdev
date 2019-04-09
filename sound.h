@@ -1,6 +1,7 @@
 // constants definition
 #define RATE 16000 //sample per second
 #define CMD "arecord -r16000 -c1 -f S16_LE -d1 -q test.wav"
+//#define DEBUG
 // data structures
 struct WAVHDR{
 	char ChunkID[4];	// it has to be "RIFF"

@@ -1,17 +1,20 @@
 #include <stdio.h>
+#include "screen.h"
 void barChart(int arr[]) {
 	int i, j; // counters
+	setColors(RED, bg(BLACK));
 	for(i = 0; i < 80; i++) { // for 80 columns
 		for(j = 0; j < arr[i] / 3; j++) {
 			printf("\033[%d;%dH", 35-j, i+1);
-			#ifdef UNICODE
-				printf("%s", "\u2590");
-			#else
-				printf("%c", ' ');
-			#endif
+#ifdef UNICODE
+			printf("%s", "\u2590");
+#else
+			printf("%c", ' ');
+#endif
 		}
 	}
 }
+
 void clearScreen(void) {
 	printf("\033[2J");
 	fflush(stdout); // active esc.seq.immediate
