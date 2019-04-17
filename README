@@ -1,1 +1,68 @@
 # this is the first version
+This project is to turn a Raspberry PI as an audio devices. The 
+device is able to do 2 functions: as a sound collector and as a 
+test-tone generator.
+
+Table of Content
+	1. Configuration Instruction
+	2. Installation Instruction
+	3. Operating Instruction
+	4. File list (Manifest)
+	5. Copyright / copyleft
+	6. Contact Information
+	7. Credits and Acknoeledgements
+
+1. Configuration Instructions
+
+The application is running on a Raspberry PI 3 model B. This PI
+should come with a USB sound card., a network connection, a 
+microphone.
+
+1.1 Configure USB sound card as default audio device 
+
+	- Boot up RPi, and apply the USB sound card. Use “lsusb” command to check if your USB sound card is mounted.
+
+	- Use “sudo nano /etc/asound.conf”command and put following content to the file:
+		pcm.!default {
+			type plug
+			slave {
+				pcm "hw:1,0"
+			}
+		}
+		ctl.!default {
+				type hw
+				card 1
+		}
+
+	- Go to your home directory. Use “nano .asoundrc” command and put the same content to the file.
+
+	- Run “alsamixer” you should be able to see that USB sound card is the default audio device.
+
+	- Run “arecord -r44100 -c1 -f S16_LE -d5 test.wav” to test that your microphone is working. 
+	  You should see a “test.wav” file in the current folder.
+
+	- Put earphone on the USB sound card. Run “aplay test.wav” to check that recording is okay.
+
+
+1.2 Install Libcurl library
+
+	- First use command "ls /usr/include/curl" or "ls /usr/include/arm-linux-gnueabihf/curl" to identify that libcurl library is installed.
+
+	- If the folder doesn’t exist. Run “sudo apt-get update” to update the application list.
+
+	- Run “sudo apt-get install libcurl3” to install the libcurl3.
+
+	- Run “sudo apt-get install libcurl4-openssl-dev” to install the development API of libcurl4.
+
+2. Installation Instruction
+
+3. Operating Instruction
+
+4. File list (Manifest)
+
+5. Copyright / copyleft
+
+6. Contact Information
+
+7. Credits and Acknoeledgements
+
