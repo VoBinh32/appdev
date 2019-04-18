@@ -14,17 +14,18 @@ Table of Content
 
 1. Configuration Instructions
 
-The application is running on a Raspberry PI 3 model B. This PI
-should come with a USB sound card., a network connection, a 
-microphone.
+	The application is running on a Raspberry PI 3 model B. This PI
+should come with a USB sound card., a network connection, a microphone.
 
 1.1	Configure USB sound card as default audio device
 
-	We can configure default audio devices using Alsa. Advanced Linux Sound Architecture (ALSA) is a software framework is part of the linux so we should be able to modify the conf file and set the default audio device. 
+	We can configure default audio devices using Alsa. Advanced Linux Sound Architecture (ALSA) is a software framework is a
+	part of the linux so we should be able to modify the conf file and set the default audio device. 
 
 1.2	Install Libcurl library
 
-	A command line tool and library for transferring data with URL syntax, supporting HTTP, HTTPS, FTP, FTPS, GOPHER, TFTP, SCP, SFTP, SMB, TELNET, DICT, LDAP, LDAPS, FILE, IMAP, SMTP, POP3, RTSP and RTMP.
+	A command line tool and library for transferring data with URL syntax, supporting HTTP, HTTPS, FTP, FTPS, GOPHER, TFTP,
+	SCP, SFTP, SMB, TELNET, DICT, LDAP, LDAPS, FILE, IMAP, SMTP, POP3, RTSP and RTMP.
 
 
 2. Installation Instruction
@@ -58,7 +59,8 @@ microphone.
 
 
 
-	- First use command "ls /usr/include/curl" or "ls /usr/include/arm-linux-gnueabihf/curl" to identify that libcurl library is installed.
+	- First use command "ls /usr/include/curl" or "ls /usr/include/arm-linux-gnueabihf/curl" to identify that libcurl 
+	library is installed.
 
 	- If the folder doesn’t exist. Run “sudo apt-get update” to update the application list.
 
