@@ -3,7 +3,7 @@
 device is able to do 2 functions: as a sound collector and as a 
 test-tone generator.
 
-##Table of Content
+## Table of Content
 	1. Configuration Instruction
 	2. Installation Instruction
 	3. Operating Instruction
@@ -12,24 +12,24 @@ test-tone generator.
 	6. Contact Information
 	7. Credits and Acknowledgements
 
-###1. Configuration Instructions
+##1. Configuration Instructions
 
 The application is running on a Raspberry PI 3 model B. This PI
 should come with a USB sound card., a network connection, a 
 microphone.
 
-####1.1	Configure USB sound card as default audio device
+###1.1	Configure USB sound card as default audio device
 
 	We can configure default audio devices using Alsa. Advanced Linux Sound Architecture (ALSA) is a software framework is part of the linux so we should be able to modify the conf file and set the default audio device. 
 
-1.2	Install Libcurl library
+###1.2	Install Libcurl library
 
 	A command line tool and library for transferring data with URL syntax, supporting HTTP, HTTPS, FTP, FTPS, GOPHER, TFTP, SCP, SFTP, SMB, TELNET, DICT, LDAP, LDAPS, FILE, IMAP, SMTP, POP3, RTSP and RTMP.
 
 
-2. Installation Instruction
+##2. Installation Instruction
 
-2.1 Set USB Sound Card as Default:
+###2.1 Set USB Sound Card as Default:
 
 	- Boot up RPi, and apply the USB sound card. Use “lsusb” command to check if your USB sound card is mounted.
 
@@ -54,7 +54,7 @@ microphone.
 
 	- Put earphone on the USB sound card. Run “aplay test.wav” to check that recording is okay.
 
-2.2 Install libcurl instructions:
+###2.2 Install libcurl instructions:
 
 
 
@@ -67,7 +67,7 @@ microphone.
 	- Run “sudo apt-get install libcurl4-openssl-dev” to install the development API of libcurl4.
 
 
-3. Operating Instructions:
+##3. Operating Instructions:
 	- Prepare all the files from the resporitory into  Raspberry Pi's 
 directory.
 
@@ -78,9 +78,9 @@ directory.
 
 	- “./sound.out” : create testTone.wav with your specified requests
 	
--	Using a mic and a headphone to check your testTone.wav if it works well or not.
+	- Using a mic and a headphone to check your testTone.wav if it works well or not.
 
-4. File list (Manifest)
+##4. File list (Manifest)
 	- screen.c
 	- makefile
 	- screen.h
@@ -95,13 +95,13 @@ directory.
 
 
 
-5. Copyright / copyleft: by Vo Binh, instructed by Dr. Gao Chao from Vaasa University of Applied Sciences.
+##5. Copyright / copyleft: by Vo Binh, instructed by Dr. Gao Chao from Vaasa University of Applied Sciences.
 
 
-6. Contact Information
+##6. Contact Information
 	Name : Vo Binh
 	Email : thanhbinh322000@gmail.com
 
-7. Credits and Acknowledgements
+##7. Credits and Acknowledgements
 
 
